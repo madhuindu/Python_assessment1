@@ -1,0 +1,31 @@
+import random
+flag = True
+while flag:
+    num=input("Enter the number:")
+    if num.isdigit():
+        num=int(num)
+        print("Lets start the game!")
+        flag=False
+    else:
+        print("invalid")
+        break
+secret=random.randint(1,num)
+guess=None
+count=1
+while count<=5:
+    while guess != secret:
+        guess=input("Enter the number between 1 and "+str(num)+" :")
+        if guess.isdigit():
+            guess=int(guess)
+        if guess == secret:
+            print("You got it!")
+        elif guess > secret:
+            print("your guess is higher")
+        elif guess < secret:
+            print("Your guess is lower")
+            print("You are left with {} chances please try again".format(5-count))
+            count+=1
+            break
+        else:
+            print("GAME OVER!")
+ 
