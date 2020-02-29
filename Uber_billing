@@ -1,0 +1,23 @@
+places = ['Railway_station' , 'Annanagar' , 'Airport' , 'Tambaram' , 'Koyambedu' , 'Thoraipakkam' , 'Tharamani']
+mode_of_transport=['Bike' , 'Auto' , 'Mini' , 'Micro' , 'Prime']
+rates=[20,50,70,80,100]
+for i in range(0,len(places)):
+    print(str(int(i)+1)+"."+places[i])
+source=int(input('From:'))
+destination=int(input('To:'))
+for j in range(0,len(mode_of_transport)):
+    print(str(int(j)+1)+"."+mode_of_transport[j])
+travel=int(input('Mode of transport:'))
+if((source > (len(places) + 1)) or source < 1 or (destination > (len(places) + 1)) or destination < 1 or (travel > (len(mode_of_transport) + 1)) or travel < 1): 
+    print()
+    print("Result")
+    print(" ")
+    print("invalid")
+else:
+    sorce=places[source - 1]
+    dest=places[destination-1]
+    vehicle=mode_of_transport[travel-1]
+    print()
+    print("Price")
+    print(" ")
+    print("Fare to travel "+sorce+" and "+dest+" was rs."+str(rates[travel-1]))
