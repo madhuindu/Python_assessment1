@@ -1,0 +1,55 @@
+#1 + 2 + 3 + 4 + 5 + .... + n
+def numberseries1(n):
+    for i in range(1,n+1):
+        print(i, end=" ")
+        
+numberseries1(7)
+
+#1 2 3 6 9 18 27 54
+def numberseries2(n):
+    series=1
+    count=0
+    sum=1
+    print(sum, end=" ")
+    for i in range(1,n):
+        count = count+1
+        sum= sum+series
+        print(sum , end=" ")
+        if count == 2:
+            series=sum
+            count=0
+numberseries2(9)
+
+#1 4 9 16 25
+def square(n):
+    for i in range(1,n+1):
+            print(i**2 ,end=" ")
+square(7)
+#1 2 9 4 25 6 49
+def series(n):
+    for i in range(1,n+1):
+        if i%2==0:
+            print(i , end=" ")
+        else:
+            print(i**2 , end=" ")
+series(9)
+
+
+#1 4 27 16 125
+def series(n):
+    for i in range(1,n+1):
+        if i%2 == 0:
+            print(i**2,end=" ")
+        else:
+            print(i**3, end=" ")
+series(9)
+
+#1 5 9 6 25 8 49
+def number(n):
+    print("1 5",end=" ")
+    for i in range(3,n+1):
+        if i%2 == 0:
+            print(i+2,end=" ")
+        else:
+            print(i**2,end=" ")
+number(10)
